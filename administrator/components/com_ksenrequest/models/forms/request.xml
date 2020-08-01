@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/plugins/system/ksencore/core/models/fields">
+	
+		<field name="id" type="hidden" class="id" />
+
+		<field
+			name="fields"
+			type="requestfields"
+		/>
+		
+	</fieldset>
+</form>

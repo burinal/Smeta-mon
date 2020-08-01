@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>KSENREQUEST</name>
+	<creationDate>August 2018</creationDate>
+	<author>L.D.M. Co</author>
+	<authorEmail>boss.ldm@gmail.com</authorEmail>
+	<authorUrl>http://www.lukyan-dm.ru/</authorUrl>
+	<copyright>Copyright (C) 2008-2014 L.D.M. Co All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>5.0.1</version>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+    <media folder="media" destination="com_ksenrequest">
+        <folder>css</folder>
+        <folder>files</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+		
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>	
+		<filename>index.html</filename>	
+		<filename>ksenrequest.php</filename>	
+	</files>
+	
+	<languages folder="site">
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_ksenrequest.ini</language>
+	</languages>	
+
+	<administration>
+	
+		<menu img="/media/com_ksenrequest/images/ksenrequest.png">KSENREQUEST</menu>
+		
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>		
+			<folder>views</folder>
+			<filename>access.xml</filename>		
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>ksenrequest.php</filename>
+		</files>
+		
+		<languages folder="admin">
+	        <language tag="ru-RU">language/ru-RU/ru-RU.com_ksenrequest.ini</language>
+	        <language tag="ru-RU">language/ru-RU/ru-RU.com_ksenrequest.sys.ini</language>
+	    </languages>
+		
+	</administration>
+
+</extension>

@@ -1,0 +1,21 @@
+.ksr-form-title {
+	margin:0px 0px 20px 0px;
+}
+.ksr-form-text-before {
+	margin:0px 0px 10px 0px;
+}
+.ksr-form-text-before p:last-child {
+	margin:0px;
+}
+.ksr-form-text-after {
+	margin:10px 0px 0px 0px;
+}
+.ksr-form-text-after p:last-child {
+	margin:0px;
+}
+.ksr-form-step-title {
+	margin:0px 0px 15px 0px;
+}
+.ksr-step-form .form-group .control-label {
+	text-align:left;
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" method="upgrade">
+    <name>MOD_KM_FILTER</name>
+    <version>4.1.8</version>
+    <creationDate>May 2017</creationDate>
+    <author>L.D.M. Co</author>
+    <authorEmail>boss.ldm@gmail.com</authorEmail>
+    <authorUrl>http://www.lukyan-dm.ru/</authorUrl>
+    <copyright>Copyright (C) 2008-2017 L.D.M. Co All rights reserved.</copyright>
+	<license>https://creativecommons.org/licenses/by-sa/3.0/deed.ru CC BY-SA 3.0</license>
+    <description>MOD_KM_FILTER_XML_DESCRIPTION</description>
+    
+    <files>
+        <filename module="mod_km_filter">mod_km_filter.php</filename>
+        <filename>mod_km_filter.xml</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>sql</folder>
+    </files>
+
+	<media destination="mod_km_filter" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+	</media>
+
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.mod_km_filter.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.mod_km_filter.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_km_filter.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_km_filter.sys.ini</language>
+    </languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <updateservers>
+        <server type="extension" priority="1" name="mod_km_filter">
+			http://update.ksenmart.ru/update-info/j3/pkg_ksenmart_4/com_ksenmart/modules/site/mod_km_filter-update.xml
+		</server>
+    </updateservers>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+				<field
+						name="show_categories"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						label="MOD_KM_FILTER_SHOW_CATEGORIES"
+						description="MOD_KM_FILTER_SHOW_CATEGORIES">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_filter_button"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="MOD_KM_FILTER_SHOW_FILTER_BUTTON"
+					description="MOD_KM_FILTER_SHOW_FILTER_BUTTON">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_clear_button"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="MOD_KM_FILTER_SHOW_CLEAR_BUTTON"
+					description="MOD_KM_FILTER_SHOW_CLEAR_BUTTON">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				
+            </fieldset>
+		
+			<fieldset name="common" addfieldpath="/plugins/system/ksencore/core/models/fields">
+				<field name="price" type="ksmfilterprice" title="MOD_KM_FILTER_PRICE" />
+				<field name="manufacturer" type="ksmfilterfield" title="MOD_KM_FILTER_MANUFACTURERS" />
+				<field name="country" type="ksmfilterfield" title="MOD_KM_FILTER_COUNTRIES" />
+			</fieldset>	
+			
+			<fieldset name="properties" addfieldpath="/plugins/system/ksencore/core/models/fields">
+                <field name="properties" type="ksmfilterproperties" />			
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>				
+        </fields>
+    </config>
+</extension>

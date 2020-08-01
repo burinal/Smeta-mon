@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field
+			name="title"
+			type="text"
+			label="KSR_FORMS_FORM_FIELD_PARAMS_TITLE_LBL"
+			class="inputbox"
+			labelclass="inputname"	
+			required="true"
+		/>
+		
+		<field
+			name="params-placeholder"
+			type="checkbox" 
+			label="PLG_KSRFORMFIELD_EMAIL_PLACEHOLDER_LBL"
+			value="1"
+			labelclass="inputname"	
+		/>	
+		
+		<field
+			name="class"
+			type="text"
+			label="KSR_FORMS_FORM_FIELD_PARAMS_CLASS_LBL"
+			class="inputbox"
+			labelclass="inputname"	
+		/>		
+		
+		<field
+		name="required"
+			type="checkbox" 
+			label="KSR_FORMS_FORM_FIELD_PARAMS_REQUIRED_LBL"
+			value="1"
+			labelclass="inputname"	
+		/>		
+
+		<field
+			name="published"
+			type="checkbox" 
+			label="KSR_FORMS_FORM_FIELD_PARAMS_PUBLISHED_LBL"
+			value="1"
+			labelclass="inputname"	
+		/>
+		
+		<field
+			name="requests_list"
+			type="checkbox" 
+			label="KSR_FORMS_FORM_FIELD_PARAMS_REQUESTS_LIST_LBL"
+			value="1"
+			labelclass="inputname"	
+		/>		
+		
+		<field
+			name="params-system-email"
+			type="checkbox" 
+			label="PLG_KSRFORMFIELD_EMAIL_SYSTEM_EMAIL_LBL"
+			value="1"
+			labelclass="inputname"	
+		/>	
+		
+		<field 
+			name="type" 
+			type="hidden"
+		/>
+		
+		<field 
+			name="step_id" 
+			type="hidden"
+		/>
+		
+		<field 
+			name="step_name" 
+			type="hidden"
+		/>		
+		
+		<field 
+			name="ordering" 
+			type="hidden"
+		/>
+		
+		<field 
+			name="id" 
+			type="hidden"
+		/>		
+		
+	</fieldset>
+</form>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="kmdiscountactions" version="3.1" method="upgrade">
+    <name>KSM_DISCOUNTACTIONS_SITEVISITS</name>
+    <version>4.1.8</version>
+    <creationDate>March 2017</creationDate>
+    <author>L.D.M. Co</author>
+    <authorEmail>boss.ldm@gmail.com</authorEmail>
+    <authorUrl>http://www.lukyan-dm.ru/</authorUrl>
+    <copyright>Copyright (C) 2008-2017 L.D.M. Co All rights reserved.</copyright>
+    <license>https://creativecommons.org/licenses/by-sa/3.0/deed.ru CC BY-SA 3.0</license>
+    <description>KSM_DISCOUNTACTIONS_SITEVISITS_DESCRIPTION</description>
+	
+    <files>
+		<filename plugin="sitevisits">sitevisits.php</filename>
+		<filename>index.html</filename>
+        <folder>sql</folder>
+    </files>
+    
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.plg_kmdiscountactions_sitevisits.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_kmdiscountactions_sitevisits.sys.ini</language>
+    </languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <updateservers>
+        <server type="extension" priority="1" name="sitevisits">http://update.ksenmart.ru/update-info/j3/pkg_ksenmart_4/com_ksenmart/plugins/plg_sitevisits-update.xml</server>
+    </updateservers>
+
+</extension>

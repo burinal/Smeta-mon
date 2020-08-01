@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade">
+	<name>base</name>
+	<creationDate>06.03.2019</creationDate>
+	<author>Burinal</author>
+	<licence>GNU General Public License v2 or later</licence>
+	<authorEmail>mail@burinal.com</authorEmail>
+	<authorUrl>https://burinal.com</authorUrl>
+	<version>1.0</version>
+	<description></description>
+
+<files>
+<filename>favicon.ico</filename>
+<filename>index.html</filename>
+<filename>index.php</filename>
+<filename>component.php</filename>
+<filename>template_thumbnail.png</filename>
+<folder>assets</folder>
+<folder>html</folder>
+</files>
+
+
+<positions>
+	<position>logo</position>
+	<position>top1</position>
+	<position>top2</position>
+	<position>top3</position>
+	<position>modal-button</position>
+	<position>home-menu</position>
+	<position>catalog-menu</position>
+	<position>block-menu</position>
+	<position>header1</position>
+	<position>sidebar</position>
+	<position>bread-crumb</position>
+	<position>footer-sp1</position>
+	<position>footer-sp2</position>
+	<position>footer-sp3</position>
+	<position>footer-sp4</position>
+	<position>questions</position>
+	<position>teasers</position>
+	<position>teasers_product</position>
+	<position>debug</position>
+</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="01" label="Настройки">
+
+				<field name="title_text" class="color {required:false}" type="text" default="Смета монолит" label="Title text"/>
+				<field name="post_text" class="color {required:false}" type="text" default="Производим металлические двери" label="Post text"/>
+			</fieldset>
+
+			<fieldset name="02" label="Width">
+
+				<field name="width_website" type="text" default="980px" size="10" label="Width of your website in px or %" description="Enter the width of your website in px or %. Example : 1200px or 80%. Default : 980px" />
+
+				<field type="spacer" />
+
+				<field name="width_left" type="text" default="200px" size="10" label="Width of left module position in px or %" description="Enter the width of the left module position in px or % . Default : 200px" />
+				<field name="width_right" type="text" default="200px" size="10" label="Width of right module position in px or %" description="Enter the width of the right module position in px or % . Default : 200px" />
+
+				<field name="user1_width" type="text" default="32" size="10" label="Width of user1 in percentage" description="Enter the width for user1  in percentage. Space between each user module = 2%. Default : 32" />
+				<field name="user3_width" type="text" default="32" size="10" label="Width of user3 in percentage" description="Enter the width for user3  in percentage. Space between each user module = 2%. Default : 32" />
+				<field name="user4_width" type="text" default="32" size="10" label="Width of user4 in percentage" description="Enter the width for user4  in percentage. Space between each user module = 2%. Default : 32" />
+				<field name="user6_width" type="text" default="32" size="10" label="Width of user6 in percentage" description="Enter the width for user6  in percentage. Space between each user module = 2%. Default : 32" />
+
+			</fieldset>
+
+			<fieldset name="03" label="Header">
+
+				<field name="website_title" type="text" default="Minimalist" size="20" label="Your website title" description="" />
+
+				<field name="color_website_title" class="color {required:false}" type="text" default="ff0000" label="Color of the website_title" description="Please set the color. Default : ff0000 " />
+
+				<field name="font_website_title" type="list" default="Comfortaa" label="Font for your website title" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times New Roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_website_title" type="text" size="20" default="" label="New Google font for your website title" description="Copy the code of your Google font. More details in the manual." />
+
+				<field name="website_title_fontsize" type="text" default="50px" size="10" label="Font size of your website title" description="value in % or px. Example : 160% or 18px . Default : 50px " />
+
+				<field type="spacer" />
+
+				<field name="color_main_menu_item" class="color {required:false}" type="text" default="999999" label="Color of main menu item" description="Please set the color. Default : 999999 " />
+
+				<field name="color_main_menu_item_active" class="color {required:false}" type="text" default="ff0000" label="Color of active menu item" description="Please set the color. Default : ff0000 " />
+
+				<field name="font_menu" type="list" default="Dosis" label="Font for your menu and article title" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times New Roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_menu" type="text" size="20" default="" label="New Google font for menu and article title" description="Copy the code of your Google font. More details in the manual." />
+
+				<field name="main_menu_fontsize" type="text" default="100%" size="10" label="Font size of main menu parent items" description="value in % or px. Example : 160% or 18px . Default : 140% " />
+
+				<field name="text_menu" type="text" default="menu" size="10" label="Text in the menu button (small screen)" description="Only in small screen with Responsive feature enable. default : menu" />
+
+			</fieldset>
+
+			<fieldset name="04" label="Content box">
+
+				<field name="colorh1" class="color {required:false}" type="text" default="D73C64" size="07" label="Color for article title (H1)" description="Please set the color for your article title H1. Default : D73C64 " />
+
+				<field name="font_h1" type="list" default="Dosis" label="Font for title H1" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times New Roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_h1" type="text" size="20" default="" label="New Google font for title H1" description="Copy the code of your Google font. More details in the manual." />
+
+				<field name="h1_fontsize" type="text" default="220%" size="10" label="Font size for title H1" description="value in % or px. Example : 160% or 18px . Default : 220% " />
+
+				<field type="spacer" />
+
+				<field name="colorh2" class="color {required:false}" type="text" default="663D26" size="07" label="Color for module titles and H2" description="Please set the color for titles H2 and each module title. Default : 663D26 " />
+
+				<field name="font_h2" type="list" default="Dosis" label="Font for module titles, H2, H3, H4 and H5" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times New Roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_h2" type="text" size="20" default="" label="New Google font for module titles, H2, H3, H4 and H5" description="Copy the code of your Google font. More details in the manual." />
+
+				<field name="module_title_fontsize" type="text" default="130%" size="10" label="Font size of the module titles" description="value in % or px. Example : 160% or 18px . Default : 130% " />
+				<field name="h2_fontsize" type="text" default="150%" size="10" label="Font size for titles H2" description="value in % or px. Example : 160% or 18px . Default : 150% " />
+				<field name="h3_fontsize" type="text" default="115%" size="10" label="Font size for titles H3" description="value in % or px. Example : 160% or 18px . Default : 115% " />
+				<field name="h4_fontsize" type="text" default="110%" size="10" label="Font size for titles H4" description="value in % or px. Example : 160% or 18px . Default : 110% " />
+				<field name="h5_fontsize" type="text" default="100%" size="10" label="Font size for titles H5" description="value in % or px. Example : 160% or 18px . Default : 100% " />
+
+				<field type="spacer" />
+
+				<field name="font_content" type="list" default="Helvetica" label="Font for your content" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times New Roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_content" type="text" size="20" default="" label="New Google font for your content" description="Copy the code of your Google font. More details in the manual." />
+
+				<field name="fontSize" type="list" default="0.85em" label="Default font size" description="">
+					<option value="0.55em">smallest</option>
+					<option value="0.65em">small</option>
+					<option value="0.75em">normal</option>
+					<option value="0.85em">big</option>
+					<option value="0.95em">biggest</option>
+					<option value="1.05em">biggest +</option>
+				</field>
+
+				<field type="spacer" />
+
+				<field name="color_link" class="color {required:false}" type="text" default="D73C64" size="07" label="Color for your links" description="Please set the color for your links. Default : D73C64 " />
+
+				<field name="color_link_hover" class="color {required:false}" type="text" default="ff0000" size="07" label="Color for active and hover links" description="Please set the color for your active links. Default : ff0000 " />
+
+			</fieldset>
+
+			<fieldset name="05" label="Social icons">
+
+				<field name="text_social_icons" type="text" default="" label="Text before your social icons" description=" " />
+
+				<field name="color_text_social" class="color {required:false}" type="text" default="555555" size="10" label="Color of the social icons text" description="Hexadecimal code color . default : 555555 " />
+
+				<field type="spacer" />
+
+				<field name="twitter" type="text" default="" size="30" label="Twitter URL " description="" />
+				<field name="facebook" type="text" default="" size="30" label="Facebook URL " description="" />
+				<field name="rss" type="text" default="" size="30" label="RSS URL " description="" />
+				<field name="linkedin" type="text" default="" size="30" label="Linkedin URL " description="" />
+				<field name="google" type="text" default="" size="30" label="Google+ URL " description="" />
+				<field name="instagram" type="text" default="" size="30" label="Instagram URL " description="" />
+				<field name="pinterest" type="text" default="" size="30" label="Pinterest URL " description="" />
+				<field name="renren" type="text" default="" size="30" label="Renren URL " description="" />
+				<field name="weibo" type="text" default="" size="30" label="Weibo URL " description="" />
+				<field name="xing" type="text" default="" size="30" label="Xing URL " description="" />
+				<field name="flickr" type="text" default="" size="30" label="Flickr URL " description="" />
+				<field name="youtube" type="text" default="" size="30" label="Youtube URL " description="" />
+				<field name="vimeo" type="text" default="" size="30" label="Vimeo URL " description="" />
+				<field name="tumblr" type="text" default="" size="30" label="Tumblr URL " description="" />
+
+				<field name="google1" type="list" default="no" label="Enable Google +1 icon" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field type="spacer" />
+
+				<field name="custom_icon01" type="text" default="" size="30" label="Url of a custom social link " description="" />
+				<field name="custom_icon01_text" type="text" default="" size="30" label="Text on mouse hover " description="" />
+				<field name="custom_icon01_img" type="imagelist" default="" label="Select an icon" description="You can add your own image in the folder 'images/social-icons' of the template" directory="../templates/minimalist/images/social-icons" exclude="" stripext="" />
+
+				<field type="spacer" />
+
+				<field name="custom_icon02" type="text" default="" size="30" label="Url of a second custom social link " description="" />
+				<field name="custom_icon02_text" type="text" default="" size="30" label="Text on mouse hover " description="" />
+				<field name="custom_icon02_img" type="imagelist" default="" label="Select an icon" description="You can add your own image in the folder 'images/social-icons' of the template" directory="../templates/minimalist/images/social-icons" exclude="" stripext="" />
+
+				<field type="spacer" />
+
+				<field name="custom_icon03" type="text" default="" size="30" label="Url of a third custom social link " description="" />
+				<field name="custom_icon03_text" type="text" default="" size="30" label="Text on mouse hover " description="" />
+				<field name="custom_icon03_img" type="imagelist" default="" label="Select an icon" description="You can add your own image in the folder 'images/social-icons' of the template" directory="../templates/minimalist/images/social-icons" exclude="" stripext="" />
+
+				<field type="spacer" />
+
+				<field name="custom_icon04" type="text" default="" size="30" label="Url of a fourth custom social link " description="" />
+				<field name="custom_icon04_text" type="text" default="" size="30" label="Text on mouse hover " description="" />
+				<field name="custom_icon04_img" type="imagelist" default="" label="Select an icon" description="You can add your own image in the folder 'images/social-icons' of the template" directory="../templates/minimalist/images/social-icons" exclude="" stripext="" />
+
+
+			</fieldset>
+
+			<fieldset name="06" label="Responsive design">
+
+				<field name="responsive" type="list" default="yes" label="Enable responsive feature" description="The design change when the screen resolution is less of 980 pixels : better for mobile devices">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="column_responsive" type="list" default="no" label="Display left and right column under the content in small resolution" description="Disable this option if you use a javascript animation in your column.">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="07" label="Animations">
+
+				<field name="animation" type="radio" default="yes" label="Enable animations" description="Disable this option if you doesn't want use any animation on scroll">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field type="spacer" />
+
+				<field name="animation_social" type="radio" default="yes" label="Enable animation for the Social icons" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_social_text" type="text" default="enter top move 10px after 1.5s over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 10px after 1.5s over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_translate" type="radio" default="yes" label="Enable animation for the module position Translate" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_translate_text" type="text" default="enter top move 10px after 1.5s over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 10px after 1.5s over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_logo" type="radio" default="no" label="Enable animation for the logo" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_logo_text" type="text" default="enter left wait 0.3s move 20px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter left wait 0.3s move 20px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_menu" type="radio" default="no" label="Enable animation for the main menu" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_menu_text" type="text" default="enter top move 0px over 2s" size="30" label="Customize this effect" description="Default effect : enter top move 0px over 2s" />
+
+				<field type="spacer" />
+
+				<field name="animation_breadcrumb" type="radio" default="yes" label="Enable animation for the module position Breadcrumb" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_breadcrumb_text" type="text" default="enter top move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_left" type="radio" default="yes" label="Enable animation for the Left column" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_left_text" type="text" default="enter top move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_right" type="radio" default="yes" label="Enable animation for the Right column" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_right_text" type="text" default="enter top move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_top" type="radio" default="yes" label="Enable animation for the module position Top" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_top_text" type="text" default="enter top move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_user1" type="radio" default="yes" label="Enable animation for the module position user1" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_user1_text" type="text" default="enter left move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter left move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_user2" type="radio" default="yes" label="Enable animation for the module position user2" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_user2_text" type="text" default="enter top move 10px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 10px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_user3" type="radio" default="yes" label="Enable animation for the module position user3" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_user3_text" type="text" default="enter right move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter right move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_article" type="radio" default="yes" label="Enable animation for the article" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_article_text" type="text" default="enter top move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_user4" type="radio" default="yes" label="Enable animation for the module position user4" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_user4_text" type="text" default="enter left move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter left move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_user5" type="radio" default="yes" label="Enable animation for the module position user5" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_user5_text" type="text" default="enter bottom move 10px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter bottom move 10px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_user6" type="radio" default="yes" label="Enable animation for the module position user6" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_user6_text" type="text" default="enter right move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter right move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_bottom" type="radio" default="yes" label="Enable animation for the module position Bottom" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_bottom_text" type="text" default="enter top move 10px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter top move 10px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_search" type="radio" default="yes" label="Enable animation for the module position Search" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_search_text" type="text" default="enter left move 12px over 1.33s" size="30" label="Customize this effect" description="Default effect : enter left move 12px over 1.33s" />
+
+				<field type="spacer" />
+
+				<field name="animation_address" type="radio" default="yes" label="Enable animation for the module position Address" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_address_text" type="text" default="enter left move 12px over 1s" size="30" label="Customize this effect" description="Default effect : enter left move 12px over 1s" />
+
+				<field type="spacer" />
+
+				<field name="animation_bottom_menu" type="radio" default="yes" label="Enable animation for the module position Bottom_menu" description="">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</field>
+
+				<field name="animation_bottom_menu_text" type="text" default="enter right move 12px over 1s" size="30" label="Customize this effect" description="Default effect : enter right move 12px over 1s" />
+
+			</fieldset>
+
+			<fieldset name="08" label="Google analytics tracking code">
+
+				<field name="google_code" type="textarea" rows="6" cols="40" default="" label="Paste your tracking code" description="" />
+
+			</fieldset>
+
+		</fields>
+
+	</config>
+</extension>

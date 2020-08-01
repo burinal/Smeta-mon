@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="KS_SETTINGS_COMMON_COMPONENT_SETTINGS"
+              label="KS_SETTINGS_COMMON_COMPONENT_SETTINGS_LABEL"
+              description="KS_SETTINGS_COMMON_COMPONENT_SETTINGS_DESC">
+
+        <field
+                name="request_email"
+                type="text"
+                default=""
+                label="KSR_SETTINGS_REQUESTEMAIL_LABEL"
+                description="KSR_SETTINGS_REQUESTEMAIL_DESC"
+                labelclass="inputname"
+                class="inputbox_205"
+        />
+
+        <field
+                name="bitrix_login"
+                type="text"
+                default=""
+                label="KSR_SETTINGS_BITRIX_LOGIN_LABEL"
+                description="KSR_SETTINGS_BITRIX_LOGIN_DESC"
+                labelclass="inputname"
+                class="inputbox_205"
+        />
+
+        <field
+                name="bitrix_password"
+                type="text"
+                default=""
+                label="KSR_SETTINGS_BITRIX_PASSWORD_LABEL"
+                description="KSR_SETTINGS_BITRIX_PASSWORD_DESC"
+                labelclass="inputname"
+                class="inputbox_205"
+        />
+
+        <field
+                name="bitrix_url"
+                type="text"
+                default=""
+                label="KSR_SETTINGS_BITRIX_URL_LABEL"
+                description="KSR_SETTINGS_BITRIX_URL_DESC"
+                labelclass="inputname"
+                class="inputbox_205"
+        />
+
+    </fieldset>
+
+    <fieldset name="KS_SETTINGS_ADMINPART_CONFIG"
+              label="KS_SETTINGS_ADMINPART_CONFIG_LABEL"
+              description="KS_SETTINGS_ADMINPART_CONFIG_DESC">
+
+        <field
+                name="admin_product_limit"
+                type="text"
+                default="30"
+                label="KS_SETTINGS_LISTLIMIT_LABEL"
+                description="KS_SETTINGS_LISTLIMIT_DESC"
+                labelclass="inputname"
+                class="inputbox_205"
+        />
+
+    </fieldset>
+
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC"
+    >
+
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                validate="rules"
+                filter="rules"
+                component="com_ksenmart"
+                section="component"/>
+    </fieldset>
+
+</config>

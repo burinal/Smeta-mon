@@ -1,0 +1,9 @@
+UPDATE 
+	`#__extensions` 
+SET 
+	`enabled` = '1'
+WHERE 
+	`folder` = 'ksrformfield'
+AND
+	`element` = 'phone'
+;

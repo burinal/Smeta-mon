@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="2.5" method="upgrade" client="site">
+    <name>KsenMart Colorful</name>
+    <version>1.0.2</version>
+    <creationDate>17 Oct 2013</creationDate>
+    <author>L.D.M. Co</author>
+    <authorEmail>boss.ldm@gmail.com</authorEmail>
+    <authorUrl>ldmco.ru</authorUrl>
+    <copyright>Copyright © 2013 - All rights reserved.</copyright>
+    <license>GNU General Public License v2.0</license>
+    <description><![CDATA[]]></description>
+	
+	<installfile>install.php</installfile>
+
+    <files>
+            <filename>index.html</filename>
+            <filename>index.php</filename>
+			<filename>install.php</filename>
+            <filename>component.php</filename>
+            <filename>favicon.ico</filename>
+            <filename>params.ini</filename>
+            <filename>template_preview.png</filename>
+            <filename>template_thumbnail.png</filename>
+            <folder>css</folder>
+            <folder>js</folder>
+            <folder>images</folder>
+            <folder>html</folder>
+			<folder>install</folder>
+	</files>
+
+    <positions>
+        <position>ks-menu</position>
+        <position>ks-info-menu</position>
+        <position>ks-auth</position>
+        <position>ks-clrful-header-info</position>
+        <position>ks-minicart</position>
+        <position>ks-profile</position>
+        <position>ks-categories</position>
+		<position>ks-filters</position>
+		<position>ks-shipping-info</position>
+		<position>ks-reviews</position>
+        <position>ks-search</position>
+        <position>ks-breadcrumbs</position>
+        <position>ks-main-banners</position>
+        <position>ks-main-products-list</position>
+        <position>ks-clrful-footer-info1</position>
+        <position>ks-clrful-footer-info2</position>
+        <position>ks-clrful-footer-info3</position>
+        <position>ks-clrful-footer-info4</position>
+        <position>ks-footer-copyright</position>
+        <position>ks-footer-ldm</position>
+    </positions>
+
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="site_logo" type="media" default="templates/ksenmartcolorful/images/logo.png" label="Выберите лого" />
+				
+				<field name="template_color" type="list" default="templates/ksenmartcolorful/css/green.css" label="Выберите цвет сайта">
+                    <option value="templates/ksenmartcolorful/css/green.css">Зеленый</option>
+                    <option value="templates/ksenmartcolorful/css/cyan.css">Голубой</option>
+                    <option value="templates/ksenmartcolorful/css/orange.css">Оранжевый</option>
+                </field>
+				
+				<field name="vkontakte" type="text" label="Ссылка на Vkontakte" />
+				
+				<field name="facebook" type="text" label="Ссылка на Facebook" />
+				
+				<field name="twitter" type="text" label="Ссылка на Twitter" />
+				
+				<field name="email" type="text" label="E-mail магазина" />
+				
+				<field name="phone" type="text" label="Телефон магазина" />
+				
+				<field name="address" type="text" label="Адрес магазина" />
+				
+				<field name="copyright" type="editor" label="Копирайт" filter="JComponentHelper::filterText" height="150px" />
+				
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

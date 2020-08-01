@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="plugin" group="kmplugins" version="3.1" method="upgrade">
+    <name>KSM_PLUGIN_MODULES</name>
+    <creationDate>May 2017</creationDate>
+    <author>L.D.M. Co</author>
+	<authorEmail>boss.ldm@gmail.com</authorEmail>
+    <authorUrl>http://www.lukyan-dm.ru/</authorUrl>
+	<copyright>Copyright (C) 2008-2017 L.D.M. Co All rights reserved.</copyright>
+    <license>https://creativecommons.org/licenses/by-sa/3.0/deed.ru CC BY-SA 3.0</license>
+    <version>4.1.11</version>
+    <description>KSM_PLUGIN_MODULES_DESCRIPTION</description>
+
+    <scriptfile>install.php</scriptfile>
+
+    <files>
+		<filename plugin="modules">modules.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>sql</folder>
+		<folder>assets</folder>
+    </files>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <languages folder="languages">
+        <language tag="ru-RU">ru-RU/ru-RU.plg_kmplugins_modules.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_kmplugins_modules.sys.ini</language>
+    </languages>
+	
+    <updateservers>
+        <server type="extension" priority="1" name="modules">http://update.ksenmart.ru/update-info/j3/pkg_ksenmart_4/com_ksenmart/plugins/plg_modules-update.xml</server>
+    </updateservers>
+
+    <config>
+        <fields name="params">
+            <fieldset name="visibility" label="KSM_PLUGIN_MODULES_VISIBILITY_SLIDER" addfieldpath="/plugins/kmplugins/modules/assets/fields">
+                <field name="modules" type="ksmodules" />
+            </fieldset>
+			
+            <fieldset name="layouts" label="KSM_PLUGIN_MODULES_LAYOUTS_SLIDER" addfieldpath="/plugins/kmplugins/modules/assets/fields">
+                <field name="layouts" type="kslayoutmodules" />
+            </fieldset>			
+        </fields>
+    </config>
+</extension>

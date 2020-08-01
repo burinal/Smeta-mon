@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="details" addfieldpath="/plugins/system/ksencore/core/models/fields">
+
+        <field 
+			name="id" 
+			type="hidden" 
+			class="id"
+		/>
+
+        <field
+			name="title"
+			type="text"
+			label="KSR_FORMS_FORM_TITLE_LBL"
+			description="KSR_FORMS_FORM_TITLE_DESC"
+			class="inputbox width240px"
+			labelclass="inputname"
+        />
+
+        <field
+			name="alias"
+			type="text"
+			label="KSR_FORMS_FORM_ALIAS_LBL"
+			description="KSR_FORMS_FORM_ALIAS_DESC"
+			class="inputbox width240px"
+			labelclass="inputname"
+        />
+		
+		<field
+			name="published"
+			type="checkbox" 
+			label="KSR_PUBLISHED_LBL"
+			description="KSR_PUBLISHED_DESC"
+			value="1"
+			labelclass="inputname"
+		/>		
+		
+		<field
+			name="layout" 
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_ksenrequest"
+			view="form"
+			class="inputbox width240px"
+			labelclass="inputname"			
+		/>	
+		
+		<field
+			name="thanks_modal"
+			type="checkbox" 
+			label="KSR_FORMS_FORM_THANKS_MODAL_LBL"
+			description="KSR_FORMS_FORM_THANKS_MODAL_DESC"
+			value="1"
+			labelclass="inputname"
+		/>			
+
+        <field
+			name="source"
+			type="text"
+			label="KSR_FORMS_FORM_SOURCE_LBL"
+			description="KSR_FORMS_FORM_SOURCE_DESC"
+			class="inputbox width240px"
+			labelclass="inputname"
+        />
+		
+		<field 
+			name="tags" 
+			type="tag"
+			label="JTAG" 
+			description="JTAG_DESC"
+			multiple="true"
+			labelclass="inputname"
+		/>
+		
+        <field
+			name="steps"
+			type="formsteps"
+        />		
+		
+        <field
+			name="text_before"
+			type="editor"
+			label="KSR_FORMS_FORM_TEXT_BEFORE_LBL"
+			description="KSR_FORMS_FORM_TEXT_BEFORE_DESC"
+			filter="JComponentHelper::filterText"
+			default=""
+			buttons="true"
+			height="200px"
+        />
+		
+        <field
+			name="text_after"
+			type="editor"
+			label="KSR_FORMS_FORM_TEXT_AFTER_LBL"
+			description="KSR_FORMS_FORM_TEXT_AFTER_DESC"
+			filter="JComponentHelper::filterText"
+			default=""
+			buttons="true"
+			height="250px"
+        />	
+		
+        <field
+			type="editor"
+			name="thanks_message"
+			label="KSR_FORMS_FORM_THANKS_MESSAGE_LBL"
+			description="KSR_FORMS_FORM_THANKS_MESSAGE_DESC"
+			filter="JComponentHelper::filterText"
+			default=""
+			buttons="true"
+			height="250px"
+        />		
+
+        <field
+			name="thanks_mail"
+			type="editor"
+			label="KSR_FORMS_FORM_THANKS_MAIL_LBL"
+			description="KSR_FORMS_FORM_THANKS_MAIL_DESC"
+			filter="JComponentHelper::filterText"
+			default=""
+			buttons="true"
+			height="200px"
+        />
+
+        <field
+			name="files"
+			type="files"
+			label="KSR_FORMS_FORM_FILES_LBL"
+			description="KSR_FORMS_FORM_FILES_DESC"
+			labelclass="inputname"
+			class="active"
+			upload_to="media/com_ksenrequest/files/forms"
+			upload_folder="forms"
+			extension="com_ksenrequest"
+			wrap="slidemodule"			
+        />		
+
+        <field
+			type="hidden"
+			name="type"
+			default="form"
+        />
+
+    </fieldset>
+</form>

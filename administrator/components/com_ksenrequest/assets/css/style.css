@@ -1,0 +1,293 @@
+.set h3.headname {
+	background:#666666;
+	color:#fff;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 13px 0 13px 15px;	
+}
+.popup-window {
+    top: 80px;
+    width: 500px;
+    margin-left: -250px;	
+}
+.popup-window .heading h3 {
+	padding-left:20px;
+}
+.popup-window .inputname {
+    width: 180px!important;
+    margin-top: 5px!important;	
+}
+.popup-window .inputname + .inputbox {
+    width: calc(100% - 200px)!important;
+    margin: 0px!important;
+}
+
+.ksm-slidemodule-files .fileinput-button {
+	background-color: #666666;
+}
+.ksm-slidemodule-files .del {
+	right:5px!important;
+}
+.ksm-slidemodule-files .progress {
+	display:none;
+}
+
+.form-steps {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px;	
+}
+.form-step {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;		
+	background:#fff;
+	border:1px solid #d7d7d7;
+	border-bottom:none;
+    box-sizing: border-box;
+}
+.form-step.active {
+	border-bottom:1px solid #d7d7d7;
+}
+.form-step-mask {
+	display:none;
+}
+.form-step .headname {
+    background: #d7d7d7;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #333;
+    font-weight: normal;
+    padding: 13px 149px 13px 40px;
+    position: relative;
+	margin:0px;
+}
+.form-step-head-title {
+	display:inline-block;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px;	
+}
+.form-step-head-title-hidden {
+	display:none;
+    color: #999999;
+    font-size: 14px;	
+    height: 18px;
+    line-height: 18px;	
+}
+.form-step.title-hidden .form-step-head-title-hidden {
+	display:inline-block;
+}
+.form-step .headname .drag {
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 8px;
+    width: 17px;
+    height: 13px;
+    background: url(../images/drag-white.png) 0% 0% no-repeat;
+    cursor: pointer;
+}
+.form-step .headname .sh {
+    position: absolute;
+    top: -1px;
+    right: 8px;
+    width: 47px;
+    height: 45px;
+    background: url(../images/show.png) 50% 50% no-repeat;
+    cursor: pointer;
+}
+.form-step.active .headname .sh {
+    background: url(../images/hide.png) 50% 50% no-repeat;
+}
+.form-step .headname .del {
+    position: absolute;
+    top: -1px;
+    right: 55px;
+    width: 47px;
+    height: 45px;
+    background: #ff000a;
+	color:#fff;
+    font-size: 32px;
+	text-align:center;
+	line-height:45px;
+	text-decoration:none;
+    cursor: pointer;
+}
+.form-steps:not(.can-delete) .form-step .headname .del {
+	display:none;
+}
+.form-step .headname .ch {
+    position: absolute;
+    top: -1px;
+    right: 102px;
+    width: 47px;
+    height: 45px;
+    background:#f2f2f2 url(../images/edit.png) 50% 50% no-repeat;
+    cursor: pointer;
+}
+.form-steps:not(.can-delete) .form-step .headname .ch {
+	right: 55px;
+}
+.form-step .form-step-content {
+    float: left;
+    width: 100%;	
+	margin:10px 0px 0px 0px;
+	padding:10px;
+	display:none;
+}
+.form-step.active .form-step-content {
+	display:block;
+}
+.form-step .row {
+    width: calc(100% - 20px)!important;
+}
+.form-step .add {
+	margin:0px 10px 0px 0px;
+}
+.form-step .add-step {
+	background-color: #666666;
+}
+.form-step-field {
+    color: black;
+    display: block;
+    padding: 7px 94px 7px 40px;
+    height: 30px;
+	line-height:30px;
+    background: #fff;
+    position: relative;
+    margin-bottom: 8px;
+	border:1px solid #d7d7d7;
+}
+.form-step-field .drag {
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 8px;
+    width: 17px;
+    height: 13px;
+    background: url(../images/drag-grey.png) 0% 0% no-repeat;
+    cursor: pointer;
+}
+.form-step-field .del {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 47px!important;
+    height: 46px!important;
+    background: #ff000a!important;
+	color:#fff;
+    font-size: 32px;
+	text-align:center;
+	line-height:46px;
+	text-decoration:none;
+    cursor: pointer;
+}
+.form-step-field .ch {
+    position: absolute;
+    top: 0px;
+    right: 46px;
+    width: 47px;
+    height: 44px;
+    background:transparent url(../images/edit.png) 50% 50% no-repeat;
+    cursor: pointer;
+}
+.form-step-field-name {
+    font-size: 18px;
+    line-height: 30px;	
+	margin:0px;
+	float: left;
+    width: 190px;
+    display: inline-block;	
+	text-overflow:ellipsis;
+}
+.form-step-field-required {
+    float: left;
+    margin: 0px 20px 0px 0px;
+}
+.form-step-field-required input[type="checkbox"] {
+	margin:0px;
+}
+.form-step-field-published {
+	float: left;
+	margin: 0px 20px 0px 0px;
+}
+.form-step-field-published label {
+	margin:0px
+}
+.form-step-button {
+    color: black;
+    display: block;
+    padding: 7px 55px 7px 8px;
+    height: 30px;
+	line-height:30px;
+    background: #fff;
+    position: relative;
+    margin-bottom: 8px;
+	border:1px solid #d7d7d7;
+}
+.form-step-button label {
+	float: left;
+    font-size: 18px;
+    line-height: 30px;	
+	margin:0px;
+    width: 222px;
+    display: inline-block;	
+}
+.form-step-button button {
+	float:left;
+	margin: 0px 20px 0px 0px;
+    line-height: 28px;
+    padding: 0px 10px;
+    background: #fff;
+    border: 1px solid #666;
+    border-radius: 5px;	
+}
+.form-step-button .ch-inline {
+	float:right;
+	margin: 0px 20px 0px 0px;
+}
+.form-step-button .ch {
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    width: 47px;
+    height: 44px;
+    background:transparent url(../images/edit.png) 50% 50% no-repeat;
+    cursor: pointer;
+}
+#form-steps-field-params .form {
+	margin:0px;
+}
+
+.row-hidden-content h4.headname {
+    background: #d7d7d7;
+    height: 18px;
+    font-weight: normal;
+    padding: 13px 15px;
+    position: relative;
+    margin: 0px;	
+}
+.row-hidden-content h4.headname label {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;
+    color: #333;
+}
+.row-hidden-content .headname .sh {
+    position: absolute;
+    top: -1px;
+    right: 8px;
+    width: 47px;
+    height: 45px;
+    background: url(../images/show.png) 50% 50% no-repeat;
+    cursor: pointer;
+}
+.row-hidden-content.active .headname .sh {
+    background: url(../images/hide.png) 50% 50% no-repeat;
+}
+.row-hidden-content .hidden-content {
+	display:none;
+}
+.row-hidden-content.active .hidden-content {
+	display:block;
+}

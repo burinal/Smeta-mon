@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" method="upgrade">
+	<name>MOD_KSM_DISCOUNT</name>
+    <author>L.D.M. Co</author>
+    <authorEmail>boss.ldm@gmail.com</authorEmail>
+    <authorUrl>http://www.lukyan-dm.ru/</authorUrl>
+    <copyright>Copyright (C) 2008-2017 L.D.M. Co All rights reserved.</copyright>
+	<license>https://creativecommons.org/licenses/by-sa/3.0/deed.ru CC BY-SA 3.0</license>
+    <version>4.1.8</version>
+    <creationDate>May 2017</creationDate>
+	<description>MOD_KSM_DISCOUNT_DESC</description>
+
+	<files>
+		<filename module="mod_ksm_discount">mod_ksm_discount.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_ksm_discount.xml</filename>
+        <folder>sql</folder>
+    </files>
+	
+	<media folder="media" destination="mod_ksm_discount">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>index.html</filename>
+    </media>
+	
+    <languages folder="language">
+		<language tag="ru-RU">ru-RU.mod_ksm_discount.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ksm_discount.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_ksm_discount.ini</language>
+		<language tag="en-GB">en-GB.mod_ksm_discount.sys.ini</language>
+	</languages>
+	
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <updateservers>
+        <server type="extension" priority="1" name="mod_km_discount">
+			http://update.ksenmart.ru/update-info/j3/pkg_ksenmart_4/com_ksenmart/modules/site/mod_km_discount-update.xml
+		</server>
+    </updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/ksencore/core/models/fields">
+				<field
+					name="show"
+					type="list"
+					default="title"
+					label="MOD_KSM_DISCOUNT_SHOW_LBL"
+					description="MOD_KSM_DISCOUNT_SHOW_DESC"
+					multiple="true">
+					<option
+						value="title">MOD_KSM_DISCOUNT_SHOW_TITLE</option>
+					<option
+						value="image">MOD_KSM_DISCOUNT_SHOW_IMAGE</option>
+					<option
+						value="content">MOD_KSM_DISCOUNT_SHOW_CONTENT</option>						
+				</field>
+				
+				<field
+					name="types"
+					type="kspluginslist"
+					folder="kmdiscount"
+					label="MOD_KSM_DISCOUNT_TYPES_LBL"
+					description="MOD_KSM_DISCOUNT_TYPES_DESC"
+					multiple="true" />
+				
+				<field
+					name="img_width"
+					type="text"
+					default="200"
+					label="MOD_KSM_DISCOUNT_IMG_WIDTH_LBL"
+					description="MOD_KSM_DISCOUNT_IMG_WIDTH_DESC" />	
+
+				<field
+					name="img_height"
+					type="text"
+					default="100"
+					label="MOD_KSM_DISCOUNT_IMG_HEIGHT_LBL"
+					description="MOD_KSM_DISCOUNT_IMG_HEIGHT_DESC" />						
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>	
+</extension>

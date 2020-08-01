@@ -1,0 +1,121 @@
+.block-sc{
+	margin: 0px 12px 0 10px;
+}
+#result-sc{
+	font-size: 14px;
+}
+.message-white{
+	color:#fff;
+}
+.message-red{
+	color:red;
+}
+.message-yellow{
+	color:yellow;
+}
+#name-sc{
+	margin-top: 10px;
+}
+.panel-sc img, .panel-sc{
+	margin:0;
+	padding:0;
+	border:none;
+}
+.panel-sc img{
+	display:block;
+	margin-top:5px; 
+	width: 30px;
+}
+.panel-sc>img:first-child{
+	margin-top: 0px !important;
+}
+.panel-sc{
+	position: fixed;
+}
+@media screen and (min-width: 768px) {
+	.panel-sc{
+		margin: auto;
+		top: 0; 
+		bottom: 0; 
+	}
+}
+.block-sc input[type="checkbox"]{
+	margin:0 10px 0 0;
+	padding:0;
+}
+.email-sc{
+	padding:0;
+	border:none;
+	cursor:pointer;
+	display:block;
+}
+.block-sc input{
+	height: 22px !important;
+}
+.block-sc button{
+	margin-right: 10px;
+	height: 28px;
+}
+.block-sc textarea{
+	height: 145px !important;
+}
+.block-sc textarea, .block-sc input[type="text"], .block-sc input[type="email"]{
+	width:100% !important;
+	margin:0 0 10px 0;
+	padding:0 !important;
+}
+.close-sc{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	float:right;
+	cursor:pointer;
+	margin-top: -17px;
+	right:-17px;
+}
+.form-action-sc{
+	width: 320px;
+	height: 307px;
+	position: fixed;
+	box-shadow: 0 0 5px 3px #282828;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0; 
+	z-index: 65535;
+    background:#FFF;
+	display:none;
+}
+@media screen and (max-width: 370px) {
+   .form-action-sc{
+		width: 90%;
+   }
+}
+@media screen and (max-width: 768px) {
+	.panel-sc{
+		height: 30px;
+		width: 100%; 
+		bottom:5px;
+		left:0;
+		text-align: center;
+	}
+	.panel-sc img{
+		display: inline;
+		margin-left: 5px;
+		margin-top:0;
+	}
+	.panel-sc>img:first-child{
+		margin-left: 0px !important;
+	}
+}
+.wrapper-sc{
+	top: 0px;
+    left:0px;
+	position: fixed; 
+	z-index: 65535;
+	width:100%;
+    height:100%;
+	background: rgba(0, 0, 0, 0.5);
+	display:none;
+	}
